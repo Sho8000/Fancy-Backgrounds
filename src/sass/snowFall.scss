@@ -1,0 +1,53 @@
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.snow-container{
+  //For Button///////////////
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  button{
+    height: 50px;
+  }
+  ///////////////////////////
+  
+  //For create the background
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  .snow{
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    animation: snowFall 10s linear;
+  }
+  @keyframes snowFall{
+    0%{
+      opacity: 0%;
+      top: 0;
+      transform: translateX(10px);
+    }
+    10%{
+      opacity: 1;
+      transform: translateX(-10px);
+    }
+    90%{
+      opacity: 1;
+      transform: translateX(10px);
+    }
+    100%{
+      opacity: 0;
+      top: 100%;
+      transform: translateX(-10px);
+    }
+  }
+}

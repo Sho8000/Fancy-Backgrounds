@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+    <link rel="stylesheet" href="../css/Honeycomb.css" />
+    <title>Background List</title>
+  </head>
+  <body>
+    <h1>Hexagons</h1>
+    <div id="pattern"></div>
+    <div id="gradient"></div>
+
+    
+    <div class="container">
+
+<!--       <svg height="200" width="200" style="background-color: yellow;">
+        <polygon points="0 100, 50 14, 150 14, 200 100, 150 186, 50 186"
+        stroke = "black"
+        fill = "gray"/>
+      </svg>
+ -->
+      <!-- 
+      <svg height="350" width="300" style="background-color: green;">
+        <polygon points="0 0, 0 175, 50 175, 100 87, 50 0"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="50 0, 100 87, 200 87, 250 0"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="250 0, 200 87, 250 175,300 175, 300, 0"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="0 175,50 175, 100 263, 50 350, 0 350"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="50 350,100 263, 200 263, 250 350"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="250 350,200 263, 250 175, 300 175, 300 350"
+        stroke = "black"
+        fill = "black"/>
+      </svg>
+      <svg height="350" width="300" style="background-color: green;">
+        <polygon points="0 0, 0 175, 50 175, 100 87, 50 0"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="50 0, 100 87, 200 87, 250 0"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="250 0, 200 87, 250 175,300 175, 300, 0"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="0 175,50 175, 100 263, 50 350, 0 350"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="50 350,100 263, 200 263, 250 350"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="250 350,200 263, 250 175, 300 175, 300 350"
+        stroke = "black"
+        fill = "black"/>
+      </svg>
+      <svg height="350" width="300" style="background-color: green;">
+        <polygon points="0 0, 0 175, 50 175, 100 87, 50 0"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="50 0, 100 87, 200 87, 250 0"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="250 0, 200 87, 250 175,300 175, 300, 0"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="0 175,50 175, 100 263, 50 350, 0 350"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="50 350,100 263, 200 263, 250 350"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="250 350,200 263, 250 175, 300 175, 300 350"
+        stroke = "black"
+        fill = "black"/>
+      </svg>
+      <svg height="350" width="300" style="background-color: green;">
+        <polygon points="0 0, 0 175, 50 175, 100 87, 50 0"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="50 0, 100 87, 200 87, 250 0"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="250 0, 200 87, 250 175,300 175, 300, 0"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="0 175,50 175, 100 263, 50 350, 0 350"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="50 350,100 263, 200 263, 250 350"
+        stroke = "black"
+        fill = "black"/>
+        <polygon points="250 350,200 263, 250 175, 300 175, 300 350"
+        stroke = "black"
+        fill = "black"/>
+      </svg>
+      <svg height="350" width="300" style="background-color: green;">
+        <polygon points="0 0, 0 175, 50 175, 100 87, 50 0"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="50 0, 100 87, 200 87, 250 0"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="250 0, 200 87, 250 175,300 175, 300, 0"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="0 175,50 175, 100 263, 50 350, 0 350"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="50 350,100 263, 200 263, 250 350"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="250 350,200 263, 250 175, 300 175, 300 350"
+        stroke = "black"
+        fill = "gray"/>
+      </svg>
+      <svg height="350" width="300" style="background-color: green;">
+        <polygon points="0 0, 0 175, 50 175, 100 87, 50 0"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="50 0, 100 87, 200 87, 250 0"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="250 0, 200 87, 250 175,300 175, 300, 0"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="0 175,50 175, 100 263, 50 350, 0 350"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="50 350,100 263, 200 263, 250 350"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="250 350,200 263, 250 175, 300 175, 300 350"
+        stroke = "black"
+        fill = "gray"/>
+      </svg>
+      <svg height="350" width="300" style="background-color: green;">
+        <polygon points="0 0, 0 175, 50 175, 100 87, 50 0"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="50 0, 100 87, 200 87, 250 0"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="250 0, 200 87, 250 175,300 175, 300, 0"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="0 175,50 175, 100 263, 50 350, 0 350"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="50 350,100 263, 200 263, 250 350"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="250 350,200 263, 250 175, 300 175, 300 350"
+        stroke = "black"
+        fill = "gray"/>
+      </svg>
+      <svg height="350" width="300" style="background-color: green;">
+        <polygon points="0 0, 0 175, 50 175, 100 87, 50 0"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="50 0, 100 87, 200 87, 250 0"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="250 0, 200 87, 250 175,300 175, 300, 0"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="0 175,50 175, 100 263, 50 350, 0 350"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="50 350,100 263, 200 263, 250 350"
+        stroke = "black"
+        fill = "gray"/>
+        <polygon points="250 350,200 263, 250 175, 300 175, 300 350"
+        stroke = "black"
+        fill = "gray"/>
+      </svg>
+ -->
+
+    </div>
+
+    <script src="../js/Honeycomb.js"></script>
+  </body>
+</html>
