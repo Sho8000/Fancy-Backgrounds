@@ -5,26 +5,124 @@ body {
   overflow: hidden;
 }
 
+.header {
+  position: absolute;
+  height: 10vh;
+  width: 100vw;
+  z-index: 2;
+  margin-top: 20px;
+}
+.header .Links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  align-items: center;
+  margin-left: 4rem;
+  margin-right: 5rem;
+}
+.header .Links a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  text-shadow: 1px 1px 2px yellow;
+}
+.header .Links #SnowFall {
+  position: relative;
+  margin-right: 50px;
+}
+.header .Links #SnowFall #snowflake {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.header .Links #SnowFall a {
+  position: absolute;
+  width: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.header .Links #SearchMe {
+  position: relative;
+  margin-left: 70px;
+  margin-right: 60px;
+}
+.header .Links #SearchMe #SearchLight {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.header .Links #SearchMe a {
+  position: absolute;
+  width: 110px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.header .Links #Honeycomb {
+  position: relative;
+  margin-left: 70px;
+  margin-right: 60px;
+}
+.header .Links #Honeycomb #HoneycombImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+.header .Links #Honeycomb a {
+  position: absolute;
+  width: 110px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
 .snow-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  background-color: black;
+  background-image: url(../resource/snow4.png);
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 .snow-container button {
+  z-index: 1;
   height: 50px;
 }
 .snow-container .snow {
-  background-color: white;
+  background: radial-gradient(white, transparent 50%);
   width: 50px;
   height: 50px;
   border-radius: 50%;
   position: absolute;
   animation: snowFall 10s linear;
+}
+.snow-container .snowflake {
+  background-image: url(../resource/snowflake.png);
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  animation: snowflakeFall 10s linear;
+  z-index: 1;
 }
 @keyframes snowFall {
   0% {
@@ -36,6 +134,14 @@ body {
     opacity: 1;
     transform: translateX(-10px);
   }
+  40% {
+    opacity: 1;
+    transform: translateX(15px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
   90% {
     opacity: 1;
     transform: translateX(10px);
@@ -43,7 +149,29 @@ body {
   100% {
     opacity: 0;
     top: 100%;
+    transform: translateX(-5px);
+  }
+}
+@keyframes snowflakeFall {
+  0% {
+    top: 0;
+    transform: translateX(10px);
+  }
+  10% {
     transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(15px);
+  }
+  70% {
+    transform: translateX(-10px);
+  }
+  90% {
+    transform: translateX(10px);
+  }
+  100% {
+    top: 100%;
+    transform: translateX(-5px);
   }
 }
 

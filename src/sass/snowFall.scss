@@ -5,6 +5,95 @@ body{
   overflow: hidden;
 }
 
+.header{
+  position: absolute;
+  height: 10vh;
+  width: 100vw;
+  z-index: 2;
+  margin-top: 20px;
+  .Links{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 4rem;
+    margin-right: 5rem;
+    a{
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      text-shadow: 1px 1px 2px yellow;
+    }
+    #SnowFall{
+      position: relative;
+      margin-right: 50px;
+      #snowflake{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 70px;
+        height: 70px;
+        z-index: 1;
+      }
+      a{
+        position: absolute;
+        width: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 2;
+      }
+    }
+    #SearchMe{
+      position: relative;
+      margin-left: 70px;
+      margin-right: 60px;
+      #SearchLight{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 70px;
+        height: 70px;
+        z-index: 1;
+      }
+      a{
+        position: absolute;
+        width: 110px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 2;
+      }
+    }
+    #Honeycomb{
+      position: relative;
+      margin-left: 70px;
+      margin-right: 60px;
+      #HoneycombImg{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 70px;
+        height: 70px;
+        z-index: 1;
+      }
+      a{
+        position: absolute;
+        width: 110px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 2;
+      }
+    }
+
+
+  }
+}
+
 .snow-container{
   //For Button///////////////
   display: flex;
@@ -13,23 +102,35 @@ body{
   gap: 1rem;
 
   button{
+    z-index: 1;
     height: 50px;
   }
   ///////////////////////////
   
   //For create the background
-  background-color: black;
+  background-image: url(../resource/snow4.png);
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   .snow{
-    background-color: white;
+    background: radial-gradient(white,transparent 50%);
     width: 50px;
     height: 50px;
     border-radius: 50%;
     position: absolute;
     animation: snowFall 10s linear;
   }
+  .snowflake{
+    background-image: url(../resource/snowflake.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    animation: snowflakeFall 10s linear;
+    z-index: 1;
+  }
+
   @keyframes snowFall{
     0%{
       opacity: 0%;
@@ -40,6 +141,14 @@ body{
       opacity: 1;
       transform: translateX(-10px);
     }
+    40%{
+      opacity: 1;
+      transform: translateX(15px);
+    }
+    70%{
+      opacity: 1;
+      transform: translateX(-10px);
+    }
     90%{
       opacity: 1;
       transform: translateX(10px);
@@ -47,7 +156,30 @@ body{
     100%{
       opacity: 0;
       top: 100%;
-      transform: translateX(-10px);
+      transform: translateX(-5px);
     }
   }
+  @keyframes snowflakeFall{
+    0%{
+      top: 0;
+      transform: translateX(10px);
+    }
+    10%{
+      transform: translateX(-10px);
+    }
+    40%{
+      transform: translateX(15px);
+    }
+    70%{
+      transform: translateX(-10px);
+    }
+    90%{
+      transform: translateX(10px);
+    }
+    100%{
+      top: 100%;
+      transform: translateX(-5px);
+    }
+  }
+
 }
